@@ -1,0 +1,14 @@
+div [aria-label='Yes'] > div > span::after {
+  content: ' / Удалить ';
+}
+div [aria-label='Yes'] {
+  background-color: red !important;
+  color: #fff !important;
+}
+div [aria-label='No'] > div > span::after {
+  content: ' / Отмена ';
+}
+td [role='columnheader'] {
+  color: #ffffff !important;
+  background-color: #3464ab !important;
+}

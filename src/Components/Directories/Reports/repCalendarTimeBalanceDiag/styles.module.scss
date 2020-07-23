@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  .root_dx_component {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+  }
+}

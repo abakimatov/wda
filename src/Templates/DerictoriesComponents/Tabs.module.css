@@ -1,0 +1,11 @@
+.tab_st {
+    border-radius: 10px 10px 0px 0px !important;
+    color: #FFF !important;
+    background-color: #3f51b5 !important;
+    width: 50px;
+    font-size: 8px;
+    min-width: 80px;
+  }
+.tab_st:hover {
+    background-color: #5c6bc0 !important;
+}

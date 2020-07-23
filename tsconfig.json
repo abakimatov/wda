@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "types": ["react", "jest"],
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom", "dom.iterable"],
+    "baseUrl": "./src",
+    "paths": {
+      "@AppStore/*": ["AppStore/*"],
+      "@Templates/*": ["Templates/*"],
+      "@Files/*": ["files/*"]
+    }
+  },
+  "compileOnSave": true,
+  "allowJs": true,
+  "checkJs": true
+}

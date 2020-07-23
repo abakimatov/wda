@@ -1,0 +1,18 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  .rootSelects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    .select {
+      width: 100%;
+      select {
+        width: 100%;
+      }
+    }
+  }
+}
+.rootChart {
+  background: #fff;
+}

@@ -1,0 +1,12 @@
+.registration_organization_wrapper {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px; 
+    margin-bottom: 50px;
+    padding: 10px;
+}  
+.submit_btn {
+    display: flex;
+    justify-content: flex-end;
+}

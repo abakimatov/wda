@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* Пользовательская регистрация */
+h1 {
+  text-align: center; }
+
+.registration_wrapper {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px; }
+  .registration_wrapper .paper {
+    padding: 10px 20px; }
+    .registration_wrapper .paper .form {
+      width: 100%;
+      max-width: 450px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 20px; }
+      .registration_wrapper .paper .form .login_input {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .registration_wrapper .paper .form .password_input {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .registration_wrapper .paper .form .select_organizations {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .registration_wrapper .paper .form .select_organizations select {
+          outline: none;
+          background: #fff;
+          border-radius: 4px;
+          cursor: pointer; }
+
+/* Генерация ключа */
+.gen_reg_key {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px; }
+  .gen_reg_key .paper {
+    padding: 10px 20px; }
+    .gen_reg_key .paper h1 {
+      text-align: center; }
+    .gen_reg_key .paper .gen_reg_key_actions {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 1.2rem; }
+      .gen_reg_key .paper .gen_reg_key_actions .select_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 5px 0px; }
+        .gen_reg_key .paper .gen_reg_key_actions .select_wrapper select {
+          background: #fff;
+          outline: none;
+          border-radius: 4px; }
+      .gen_reg_key .paper .gen_reg_key_actions .gen_reg_key_lifetime {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 5px 0px; }
+      .gen_reg_key .paper .gen_reg_key_actions .gen_reg_key_btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin: 5px 0px; }
+      .gen_reg_key .paper .gen_reg_key_actions .gen_reg_key_new .new_key {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+
+/* Incorrect */
+.incorrect_wrapper {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px; }
+  .incorrect_wrapper div {
+    font-size: 2rem;
+    text-align: center; }

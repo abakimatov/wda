@@ -1,0 +1,25 @@
+.dialogPaper {
+  min-width: 720px !important;
+  max-width: 720px !important;
+  .dialogTitle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .dialogContent {
+    padding: 0px 100px 0px 100px !important;
+    display: flex;
+    flex-direction: column;
+    .dialogInputsWrapper {
+      margin: 10px 0px;
+      display: flex;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}
+.dialogActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

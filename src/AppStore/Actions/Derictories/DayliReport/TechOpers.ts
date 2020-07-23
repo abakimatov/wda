@@ -1,0 +1,43 @@
+import { ThunkType, STOP_LOADING_DATA, LOADING_DATA } from '../../../types';
+import { instance, check_current } from '../../Instance';
+import { ErrorHandler } from '../../ErrorHandler';
+import { SuccessMessage } from '../../Notifications';
+import { convertNull, Helper, toggleOpenAddModal } from '../Helpers';
+import { SET_DR_TECH_OPERATIONS } from '../../../types/actions/actionsDayliReportReducer';
+import { TTechOper } from '../../../types/reducers/typesDayliReportReducer';
+import { Methods } from '../../Methods/methods';
+//PLANS
+export const getDRTechOpers = (flag?: string, id?: number) : ThunkType => async(dispatch, getState) => {
+    dispatch({ type: LOADING_DATA });
+    const docId = getState().data.urlParams.id;
+    try {
+        const res = await instance(check_current()).post(``, { method: Methods.getDRTechOpers, flag, id, docId });
+        const data = res.data;
+        dispatch({ type: SET_DR_TECH_OPERATIONS, flag, id, payload: convertNull(data.list) });
+        dispatch({ type: STOP_LOADING_DATA });
+    }
+    catch(err){
+        dispatch(ErrorHandler(err));
+        dispatch({ type: STOP_LOADING_DATA });
+    }
+}
+export const iudDRTechOper = (flag?: string, body?: TTechOper, functionResultPromise?: (result?: boolean, id?: number) => void) : ThunkType => async(dispatch, getState) => {
+    dispatch({ type: LOADING_DATA });
+    const docId = getState().data.urlParams.id;
+    try {
+        const res = await instance(check_current()).post(``, { method: Methods.iudDRTechOper, docId, flag, ...body });
+        const data = res.data;
+        dispatch(getDRTechOpers(null, null));
+        dispatch(SuccessMessage(data.successMsg));
+        dispatch({ type: STOP_LOADING_DATA });
+        //
+        if(typeof functionResultPromise === 'function') functionResultPromise();
+        if(functionResultPromise && typeof functionResultPromise === 'function' && flag === "I") functionResultPromise(true, data.id);
+    }
+    catch(err){
+        dispatch(ErrorHandler(err));
+        dispatch({ type: STOP_LOADING_DATA });
+        /* if(flag === "I") dispatch(toggleOpenAddModal(false)); */
+        if(functionResultPromise && typeof functionResultPromise === 'function' && flag === "I") functionResultPromise(false, null);
+    }
+}

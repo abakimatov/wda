@@ -1,0 +1,80 @@
+@mixin mixGridTempItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+@mixin mixTextFieldsWrapper {
+  padding: 5px;
+  font-size: 14px;
+}
+.root {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 5px 5px;
+  &__full_width_items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    &__text_fields_wrapper {
+      @include mixTextFieldsWrapper();
+    }
+  }
+  &__select_items {
+    @include mixGridTempItems();
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      font-size: 14px;
+      &__name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+      }
+      &__select {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-grow: 1;
+      }
+    }
+  }
+  &__string_items {
+    @include mixGridTempItems();
+    &__text_fields_wrapper {
+      @include mixTextFieldsWrapper();
+    }
+  }
+  &__date_items {
+    @include mixGridTempItems();
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      &__date_input_placeholder {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__time_items {
+    @include mixGridTempItems();
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      &__time_input_placeholder {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__check_box_items {
+    @include mixGridTempItems();
+    &__wrapper {
+      padding: 5px;
+    }
+  }
+}

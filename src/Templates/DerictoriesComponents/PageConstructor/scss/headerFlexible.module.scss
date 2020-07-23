@@ -1,0 +1,98 @@
+$paddingFlexChild: 10px;
+@mixin mixSpaceBetween {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin mixSelect {
+  &__select {
+    @include mixSpaceBetween();
+    /* &__label {
+      width: 45%;
+      font-size: 14px;
+    } */
+    &__input {
+      width: 100%;
+    }
+  }
+  &__date {
+    @include mixSpaceBetween();
+    /* &__label {
+      width: 45%;
+      font-size: 14px;
+    } */
+    &__input {
+      width: 100%;
+    }
+  }
+  &__time {
+    @include mixSpaceBetween();
+    /* &__label {
+      width: 45%;
+      font-size: 14px;
+    } */
+    &__input {
+      width: 100%;
+    }
+  }
+}
+.Root {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  .Rtable {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  .Rtable_cell {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%; // Default to full width
+    //padding: 0.8em 1.2em;
+    overflow: hidden; // Or flex might break
+    list-style: none;
+    @include mixSelect();
+    padding: $paddingFlexChild;
+  }
+  /* Table column sizing
+  ================================== */
+  .Rtable__1cols > .Rtable_cell {
+    //width: 50%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 100%;
+  }
+  .Rtable__2cols > .Rtable_cell {
+    //width: 50%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 50%;
+  }
+  .Rtable__3cols > .Rtable_cell {
+    //width: 33.33%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 33.33%;
+  }
+  .Rtable__4cols > .Rtable_cell {
+    //width: 25%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 25%;
+  }
+  .Rtable__5cols > .Rtable_cell {
+    //width: 20%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 20%;
+  }
+  .Rtable__6cols > .Rtable_cell {
+    //width: 16.6%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 16.6%;
+  }
+}

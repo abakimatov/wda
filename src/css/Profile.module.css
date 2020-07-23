@@ -1,0 +1,15 @@
+.profile_wrapper {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px; }
+  .profile_wrapper .paper {
+    padding: 10px 20px; }
+    .profile_wrapper .paper .profile .profile_item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin: 10px 0px; }
